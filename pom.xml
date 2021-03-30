@@ -220,7 +220,7 @@
                         <ruleset>${maven.multiModuleProjectDirectory}/config/pmd/pmd-ruleset.xml</ruleset>
                     </rulesets>
                     <failOnViolation>true</failOnViolation>
-                    <printFailingErrors>true</printFailingErrors>
+                    <printFailingErrors>false</printFailingErrors>
                 </configuration>
                 <executions>
                     <execution>
@@ -237,7 +237,7 @@
         <profile>
             <id>owasp</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <build>
                 <plugins>
@@ -274,7 +274,7 @@
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
